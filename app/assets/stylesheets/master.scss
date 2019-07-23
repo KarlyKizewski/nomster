@@ -23,6 +23,12 @@ body {
 }
 
 .navbar {
-  background: image_url('mosaic.png');
+  background: image_url('grey_wash_wall.png');
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #EBC46F;
+  font-family: 'orticabold';
+  font-size:30px;
 }
