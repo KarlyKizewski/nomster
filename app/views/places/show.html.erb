@@ -1,13 +1,13 @@
 <div class="booyah-box col-10 offset-1">
 <div class="photo-box">
-  <% @place.photos.each do |photo| %>
-      <% unless photo.picture.url.nil? %>
-        <%= image_tag photo.picture.url %>
-        <br />
-        <%= photo.caption %>
-       <small><%= photo.user.email %></small>
-      <% end %>
-  <% end %>
+    <% @place.photos.each do |photo| %>
+        <% unless photo.picture.url.nil? %>
+          <%= image_tag photo.picture.url %>
+          <br />
+          <%= photo.caption %>
+         <small><%= photo.user.email %></small>
+        <% end %>
+    <% end %>
 </div>
 
   <h1><%= @place.name %></h1>
