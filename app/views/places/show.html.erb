@@ -1,12 +1,16 @@
 <div class="booyah-box col-10 offset-1">
 
+  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+    <%= f.input :caption %>
+    <%= f.submit "Add a Photo", class: 'btn btn-warning' %>
+  <% end %>
+
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br/><br/>
   <p><%= @place.description %></p>
 
 <% if @place.latitude.present? && @place.longitude.present? %>
-  <div id="map"></div>
   <script>
     function initMap() {
       var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
@@ -28,6 +32,7 @@
   </script>
   <div id="map"></div>
 <% end %>
+<br />
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
