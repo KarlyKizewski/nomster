@@ -1,8 +1,11 @@
 class NotificationMailer < ApplicationMailer
   default form: "no-reply@nomsterapp.com"
 
-  def comment_added
-    mail(to: "kizewski.karly@gmail.com",
-          subject: "A comment as been added to your place")
+  def comment_added(comment)
+    @place = comment.place
+    @place_owner = @place.user 
+
+    mail(to: @place_owner.email,
+          subject: "A comment as been added to #{@place.name}")
   end
 end
