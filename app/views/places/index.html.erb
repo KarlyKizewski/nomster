@@ -33,10 +33,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<br />
+
 
 <% @places.each do |place| %>
-
-<%=  paginate @places %>
 
   <div class="booyah-box col-10 offset-1">
     <% if place.photos.present? %>
@@ -72,3 +72,7 @@
   </div>
  
 <% end %>
+
+<div class="pagination">
+  <%=  paginate @places, theme: 'twitter-bootstrap-4' %>
+</div>
