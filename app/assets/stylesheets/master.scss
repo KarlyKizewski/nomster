@@ -101,10 +101,29 @@ blockquote p {
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
+.carousel img {
+  object-fit: cover;
+}
+
 .pagination {
   justify-content: center;
 }
 
+
+.user-photos img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.user-photos {
+  margin: 5px;
+}
+
+.photo-box img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
 
 
 
